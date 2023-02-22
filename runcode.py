@@ -32,3 +32,22 @@ def download_and_add_to_csv(start_date, csv_path):
 
     else:
         print(f"Failed to download bhavcopy for {start_date}")
+
+        
+   from datetime import date, timedelta
+
+
+#Function to download the file
+# Set the start date
+start_date = date(2022, 1, 1)
+
+# Set the number of days to download
+num_days = 10
+
+# Set the CSV file path
+csv_path = "bhavcopy.csv"
+
+# Download the bhavcopies and add them to the CSV file
+for i in range(num_days):
+    download_and_add_to_csv(start_date, csv_path)
+    start_date += timedelta(days=1)
