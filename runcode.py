@@ -6,7 +6,7 @@ import pandas as pd
 import os
 
 def download_and_add_to_csv(start_date, csv_path):
-    # Construct the URL for the bhavcopy file
+    # Construct the URL for the bhavcopy file, this url can be changed by nse 
     url = f"https://www1.nseindia.com/content/historical/EQUITIES/{start_date.strftime('%Y')}/{start_date.strftime('%b').upper()}/cm{start_date.strftime('%d%b%Y').upper()}bhav.csv.zip"
 
     # Set the request headers
